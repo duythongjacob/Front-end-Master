@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+	--primary-color: #4daf54;
+    --pink-color:rgb(242, 114, 106)
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+        background-image: linear-gradient(
+            45deg,
+            rgb(65, 88, 208) 0%,
+            rgb(200, 80, 192) 50%,
+            rgb(255, 204, 112) 100%
+        );
+        overflow: hidden;
+        /* color: white; */
+        /* position: relative; */
+    }
+.button__action{
+    font-family : inherit;
+    font-size: 20px;
+    padding:20px 40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 0 5px #aba4a4;
+}
+
+.hide {
+    display: none;
+}
+.modal {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+    
+
+}
+.modal__inner {
+    width: 400px;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+.header__close{
+    cursor: pointer;
+    font-size: 18px;
+}
+.modal__inner .modal__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background-color: var(--pink-color);
+    color: #fff
+}
+.modal__content{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.modal__footer {
+    text-align: right;
+    padding: 10px;
+}
+.modal__footer button{
+    background-color: var(--pink-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
