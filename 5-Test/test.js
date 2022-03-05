@@ -36,3 +36,11 @@ function evenAndOdd() {
 Items(5,7,8,9,4,6,7,7,7);
 evenAndOdd();
 console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
+console.log("my test");
