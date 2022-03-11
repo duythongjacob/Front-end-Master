@@ -1,39 +1,42 @@
-const buttonOpen = document.querySelector(".button__action");
-const modals = document.querySelector(".modal");
-const closeButton = document.querySelector('.button__close');
-const closeHeader = document.querySelector('.header__close');
-const selectC = document.querySelector('.modal__content');
-function openBox(){
-    
-    modals.classList.remove('hide')
- 
-}
-function closeBox(e) {
-    // e.stopPropagation();
-    modals.classList.add('hide'); 
-    console.dir(e.target);
-    console.dir(e.currentTarget);
-}
-buttonOpen.addEventListener('click',openBox)
-closeButton.addEventListener('click',closeBox)
-closeHeader.addEventListener('click',closeBox)
-modals.addEventListener('click',(e)=>{ 
-    console.dir(e.target);
-    console.dir(e.currentTarget);
-    // if(e.target === e.currentTarget) {
-    //     console.dir(e.target);
-    //     console.dir(e.currentTarget);
-    //     modals.classList.add('hide')
-    
-    // } 
-   
-        modals.classList.add('hide')
-    })   
+const images = document.querySelectorAll('.wrapper .image img')
+const gallery = document.querySelector('.gallery')
+const galleryImg = document.querySelector('.gallery__inner img')
 
-// selectC.addEventListener('click',(e) =>{
+const close = document.querySelector('.gallery .close')
+const next = document.querySelector('.control.next')
+const prev = document.querySelector('.control.prev')
+let currentIndex= 0 ;
+images.forEach(function (img, index) {
+    img.onclick = () => {
+        currentIndex = index;
+        showGallery();
+    }
+}
+)
 
-//         e.stopPropagation();
-//         console.dir(e.target);
-//         console.dir(e.currentTarget);
-//         console.log('hello');
-console.log('hello');
+function showGallery() {
+	currentIndex == images.length - 1
+		? next.classList.add('hide')
+		: next.classList.remove('hide')
+
+	currentIndex == 0 ? prev.classList.add('hide') : prev.classList.remove('hide')
+
+	gallery.classList.add('show');
+	galleryImg.src = images[currentIndex].src
+}
+next.addEventListener('click', () =>{
+    if (currentIndex < images.length -1) {
+        currentIndex++;
+        showGallery();
+    }
+
+} )
+prev.addEventListener('click', () =>{
+    if (currentIndex>0) {
+        currentIndex--;
+        showGallery();
+    }
+})
+document.addEventListener('keydown', (e) => {
+	if (e.keyCode == 27) gallery.classList.remove('show')
+})
