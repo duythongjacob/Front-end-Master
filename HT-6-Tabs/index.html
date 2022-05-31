@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
+    <title> tabs</title> 
+</head>
+<body>
+<div class="container">
+    <div class="tab">
+        <button class="tab-button active"  data-id="London">Home</button>
+        <button class="tab-button" data-id="Paris">About</button>
+        <button class="tab-button"  data-id="Tokyo">Contact</button>
+      </div>
+      
+      <!-- Tab content -->
+      <div id="London" class="tab__content">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Paris" class="tab__content">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div id="Tokyo" class="tab__content">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+  
+
+</div>
+ 
+</body>
+<script src="js/logic.js"></script>
+</html>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --text-color: white;
+	--green-color: #208f11;
+    --yellow-color:#9c9e2a;
+    --red-color:#a51e19;
+    --success-light: rgba(0, 129, 0, 0.4);
+    --warning-light: rgba(129, 120, 0, 0.4);
+    --error-light: rgba(204, 63, 20, 0.4);
+    
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border:1px solid black ; */
+}
+body {
+    height: 100vh;
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    /* flex-direction: column; */
+    background: linear-gradient( to right, rgba(204, 35, 190, 0.3), rgb(19, 49, 214)), url(https://source.unsplash.com/random) no-repeat center/cover ;
+     color: white;
+   
+}
+.preview{
+    position: relative;
+    width: 500px;
+    border: 2px dashed white;
+    /* display: block; */
+    height: 500px;
+    border-radius: 5px;
+    color:  white;
+    font-size: 28px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+    cursor: pointer;    
+}
+.preview i {
+    font-size: 50px;
+    margin-bottom:  20px;
+}
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+
+}

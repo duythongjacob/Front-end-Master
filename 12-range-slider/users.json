@@ -1,0 +1,18 @@
+[
+    {
+    "id":1,
+    "name": "Duy Thong",
+    "email": "phamduythong@hiast.edu.vn"
+    },
+    {
+    "id":2,
+    "name": "jacob",
+    "email": "jacob@hiast.edu.vn"
+    },
+    {
+    "id":3,
+    "name": "jack",
+    "email": "jack@hiast.edu.vn"
+    }
+
+]

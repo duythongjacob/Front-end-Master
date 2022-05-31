@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --body-bg: #cddddd;
+    --button-icon: #233131;
+    --loader-1-shadow: #000;
+    --size-box: 40px;
+    
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border:1px solid black ; */
+}
+
+
+body {
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( to right, rgba(0,0,0,0.3), rgba(0,0,0,1)), url(https://source.unsplash.com/random) no-repeat center/cover 
+    /* background-color: var(--body-bg); */
+}
+.ctn__menu-icon{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+   
+}
+.menu-icon__one, .menu-icon__two, .menu-icon__three{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(248, 248, 248);
+  
+    transition: 0.4s
+    
+}
+
+.change .hide {
+    opacity: 0;
+}
+.change .menu-icon__one{
+
+    
+    transform: rotate(-45deg) translate(-15px, 8px);
+}
+
+.change .menu-icon__three{
+    transform: rotate(45deg) translate(-15px, -10px);
+}

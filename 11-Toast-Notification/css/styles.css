@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --text-color: white;
+	--green-color: #208f11;
+    --yellow-color:#9c9e2a;
+    --red-color:#a51e19;
+    --success-light: rgba(0, 129, 0, 0.4);
+    --warning-light: rgba(129, 120, 0, 0.4);
+    --error-light: rgba(204, 63, 20, 0.4);
+    
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border:1px solid black ; */
+}
+body {
+    height: 100vh;
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('../img/img7.jpeg') no-repeat center/cover ;
+   
+}
+button {
+    margin: 0 10px;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+   cursor: pointer;
+}
+.success{
+    background-color: var(--green-color) ;
+
+ 
+}
+.warning{
+    background-color: var(--yellow-color) ;
+} 
+.error{
+    background-color: var(--red-color) ;
+
+}
+#toasts {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: var(--text-color);
+    font-size: 26px;
+
+}
+.toast{
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    animation: slide__show 1s forwards;
+    /* animation: slide__hide  2s forwards; */
+    margin-bottom: 10px;
+}
+.toast.success{
+    border-left: 6px solid var(--green-color);
+    background-color: var(--success-light);
+ 
+}
+.toast.warning{
+    border-left: 6px solid var(--yellow-color);
+    background-color: var(--warning-light);
+   
+}
+.toast.error{
+    border-left: 6px solid var(--red-color);
+    background-color: var(--error-light);
+
+}
+.toast i {
+    margin: 0 10px;
+}
+.toast .countdown {
+   
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    animation: countdown 3s forwards;
+}
+.toast.success .countdown {
+    background: var(--green-color);
+   
+}
+.toast.warning .countdown {
+    background: var(--yellow-color);
+   
+}
+.toast.error .countdown {
+    background: var(--red-color);
+   
+}
+@keyframes countdown {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+@keyframes slide__show {
+    0% {
+        transform:  translateX(100%);
+    }
+  
+    100% {
+        transform:  translateX(0%);
+    }
+}
+@keyframes slide__hide {
+    0% {
+        transform:  translateX(0%);
+    }
+    20% {
+        transform:  translateX(-10%);
+    }
+  
+    
+    100%{
+        transform:  translateX(200%);
+    }
+}

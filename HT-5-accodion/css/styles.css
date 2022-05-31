@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --background-bg: #ccc;
+    --button-icon: #233131;
+    --loader-1-shadow: #000;
+    --size-box: 40px;
+    
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border:1px solid black ; */
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background: linear-gradient( to right, rgba(0,0,0,0.3), rgba(0,0,0,1)), url(https://source.unsplash.com/random) no-repeat center/cover 
+    /* background-color: var(--body-bg); */
+}
+
+.container {
+    width: 60% ;
+}
+.container .accordion{
+    width: 100%;
+    text-align: left;
+    padding: 10px 10px 10px  10px;
+    border: none;
+    outline: none;
+    transition: 1s;
+    
+
+}
+.acco__panel {
+    
+    max-height:0;
+    font-size: 13px;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 10px;
+    text-align: justify;
+    transition: all 0.2s ease-out;
+}
+button:hover {
+    background-color: rgb(160, 144, 144);
+    
+}
+button.accordion.active:after {
+    content: "\2212";
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active{
+    background-color: rgb(160, 144, 144);
+    
+}
+
+.accordion.active + .acco__panel {
+    display: block
+}
