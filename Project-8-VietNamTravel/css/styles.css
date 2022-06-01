@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --text-color: #606163;
+	--text-background: #edf2fc;
+    --back-ground-color: #0062be;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* border:1px solid black ; */
+}
+body{
+    background-color: #111
+
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+header .toggle {
+    max-width: 60px;
+    cursor: pointer;
+}
+header .toggle img {
+    max-width: 100%;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.banner  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* pointer-events: none; */
+    z-index: -1;
+   
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color:  rgba(0,0,0,0.5)
+}
+.banner .textBox {
+    position: relative;
+    min-width: 550px;
+    z-index: 2;
+}
+.banner .textBox h2 {
+    color:  #fff;
+    font-style: 3em;
+}
+.banner .textBox p {
+    color:  #fff;
+    font-style: 1.1em;
+    margin: 5px 0 25px;
+}
+.banner .textBox a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.banner .videoBx {
+    position: relative;
+    background: #fff;
+    margin-left: 40px;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+.banner .sci {
+    position: absolute;
+    bottom: 20px;
+    letter-spacing: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.banner .sci li {
+    list-style: none;
+}
+.banner .sci li a {
+    display: inline-block;
+    margin-right:  15px;
+}
+.banner .sci li a img {
+    transform: scale(0.5);
+    filter: invert(1);
+}
